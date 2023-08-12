@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: php:7.4-apache
+    image: php:7.4-apache-mysqli
     ports:
       - "8000:80"
     volumes:
@@ -11,10 +11,10 @@ services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: your_mysql_root_password
-      MYSQL_DATABASE: your_db_name
-      MYSQL_USER: your_db_user
-      MYSQL_PASSWORD: your_db_user_password
+      MYSQL_ROOT_PASSWORD: root2023
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: bruce
+      MYSQL_PASSWORD: bruce2023
     volumes:
       - db_data:/var/lib/mysql
 volumes:
